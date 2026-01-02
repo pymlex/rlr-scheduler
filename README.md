@@ -59,7 +59,7 @@ $$
 The DQN optimisation uses Huber loss on Q values, optimiser Adam with learning rate equal to $10^{-3}$, and epsilon greedy exploration with annealing:
 
 $$
-\varepsilon(t) = \varepsilon_{\text{end}} + (\varepsilon_{\text{start}} - \varepsilon_{\text{end}})\exp\!\bigl(-t / \tau_{\varepsilon}\bigr),
+\varepsilon(t) = \varepsilon_{\text{end}} + (\varepsilon_{\text{start}} - \varepsilon_{\text{end}}) e^{\bigl(-t / \tau_{\varepsilon}\bigr)},
 $$
 
 where example values used are $\varepsilon_{\text{start}}=0.9$, $\varepsilon_{\text{end}}=0.05$, and decay time constant $\tau_{\varepsilon}=5000$.
