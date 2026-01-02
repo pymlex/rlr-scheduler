@@ -1,7 +1,6 @@
 # Reinforcement-learning-based Learning Rate Scheduler (RLR Scheduler)
 
-<img width="600" height="173" alt="MaclaurinNet approximation examples" src="https://github.com/user-attachments/assets/c98fe004-8350-40a6-8027-6aaa5e6ee360" />
-<img width="1227" height="350" alt="image" src="https://github.com/user-attachments/assets/4d081dda-5c01-4e41-a7b7-1f38b338a3cf" />
+<img width="1227" height="350" alt="MaclaurinNet approximation examples" src="https://github.com/user-attachments/assets/4d081dda-5c01-4e41-a7b7-1f38b338a3cf" />
 
 ## Introduction
 
@@ -77,11 +76,11 @@ The key experimental settings used in the notebook are reported here. The datase
 
 The visualisation shows the dynamics of the `loss` and the sequence of selected `learning rates`. From the plots, one can assess how the agent combines aggressive and conservative steps depending on the current behaviour of the error.
 
-<img width="500" height="154" alt="loss dynamics" src="https://github.com/user-attachments/assets/faf8f438-184a-4e44-9168-9bfde7d824d3" />
+<img width="972" height="299" alt="loss dynamics" src="https://github.com/user-attachments/assets/15cd9a67-b142-4497-a627-d0f21309ba46" />
 
 The `lr` plot shows that during the first $60$ epochs the agent increased it to accelerate convergence, since the initial $lr$ value was insufficient to reduce the `loss`, and then by the $100$-th iteration decreased it to the minimum for finer tuning.
 
-<img width="500" height="152" alt="lr dynamics" src="https://github.com/user-attachments/assets/cf8f2f9c-820e-40cb-bc5b-3caaf13cb98c" />
+<img width="982" height="297" alt="lr dynamics" src="https://github.com/user-attachments/assets/945d675e-8133-4773-b17f-339faa7407b3" />
 
 However, as can be seen from the loss curve, this did not lead to an improvement, as a result of which the agent increased the `lr` to the maximum available value by approximately the $110$-th iteration. After that, both plots actively oscillate, although an overall decrease in `loss` is observed. From the `lr` plot it is clear that the agent finds values of `lr` above $10^{-4}$ to be optimal.
 
@@ -89,7 +88,7 @@ However, as can be seen from the loss curve, this did not lead to an improvement
 
 Using the `Reinforcement-learning-based Learning Rate Scheduler` (`RLR Scheduler`) for the same number of iterations ($10000$) resulted in a **two times more accurate result** than training with the heuristically chosen hyperparameter $lr = 10^{-3}$.
 
-<img width="500" height="225" alt="Adam baseline" src="https://github.com/user-attachments/assets/742e161e-b747-4a6c-8559-e736064f912e" />
+<img width="869" height="391" alt="Adam baseline" src="https://github.com/user-attachments/assets/6e91597b-b2fd-4030-9ce6-0068265cfea3" />
 
 Moreover, the `loss` curve for training without the agent has a much flatter shape; its slope in double logarithmic scale is significantly smaller. As the number of epochs increases, `loss` oscillates much less frequently when using `RLR` compared to the heuristic, although the jumps are on average larger.
 
