@@ -1,10 +1,12 @@
-# Reinforcement-learning-based Learning Rate Scheduler (RLR Scheduler)
+# Reinforcement Learning Based Learning Rate Scheduler (RLR Scheduler)
 
 <img width="1227" height="350" alt="MaclaurinNet approximation examples" src="https://github.com/user-attachments/assets/4d081dda-5c01-4e41-a7b7-1f38b338a3cf" />
 
 ## Introduction
 
-In the last five years, reinforcement learning has emerged as a promising approach to learning rate scheduling, addressing the limitations of manual tuning and fixed heuristics. Recent studies show that RL agents can learn adaptive learning rate policies directly from training dynamics, often outperforming traditional schedules, for example using PPO for deep network training ([ICLR 2023](https://openreview.net/pdf?id=0Zhwu1VaOs)) and RL-based schedulers for CNNs in fault classification ([IEEE TIE 2021](https://ieeexplore.ieee.org/document/9301217)).
+In the last five years, reinforcement learning has emerged as a promising approach to learning rate scheduling, addressing the limitations of manual tuning and fixed heuristics. Recent studies show that RL agents can learn adaptive learning rate policies directly from training dynamics, often outperforming traditional schedules, for example using RL-based schedulers for CNNs in fault classification ([IEEE TIE 2021](https://ieeexplore.ieee.org/document/9301217)), PPO for deep network training ([ICLR 2023](https://openreview.net/pdf?id=0Zhwu1VaOs)), and reinforcement learning-based scheduling techniques for archive storage ([ACM 2025](https://doi.org/10.1145/3708542)).
+
+https://dl.acm.org/doi/10.1145/3708542
 
 This repository implements a reinforcement learning agent that controls the learning rate used by the Adam optimiser while training a compact feedforward network called `MaclaurinNet` to recover polynomial coefficients from sampled function values. The agent observes low dimensional training dynamics and chooses discrete relative adjustments on a logarithmic grid of possible learning rates. The scheduler is trained with standard DQN machinery including replay buffer, target network soft updates and epsilon greedy exploration. The DQN part is implemented according to Torch's official [guide](https://docs.pytorch.org/tutorials/intermediate/reinforcement_q_learning.html). 
 
