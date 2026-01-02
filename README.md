@@ -1,6 +1,7 @@
 # Reinforcement-learning-based Learning Rate Scheduler (RLR Scheduler)
 
 <img width="600" height="173" alt="MaclaurinNet approximation examples" src="https://github.com/user-attachments/assets/c98fe004-8350-40a6-8027-6aaa5e6ee360" />
+<img width="1227" height="350" alt="image" src="https://github.com/user-attachments/assets/4d081dda-5c01-4e41-a7b7-1f38b338a3cf" />
 
 ## Introduction
 
