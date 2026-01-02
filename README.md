@@ -29,14 +29,12 @@ The baseline training uses Adam with learning rate equal to $10^{-3}$. The basel
 The scheduler is modelled as a discrete action DQN agent. The environment state contains the current loss and its short term change, written as:
 
 $$
-s_t = \bigl(L_t,\; L_t - L_{t-1}\bigr).
+s_t = \bigl(L_t, L_t - L_{t-1}\bigr).
 $$
 
 The action set consists of three relative choices decrease, keep, increase which shift the index on a predefined logarithmic learning rate grid:
 
-$$
-\{\eta_1,\eta_2,\dots,\eta_M\},
-$$
+$$\{\eta_1,\eta_2,\dots,\eta_M\},$$
 
 with $M=12$ and values spanning from $10^{-5}$ to $10^{-2}$ in logspace. Applying an action shifts the current index by $-1$, $0$ or $+1$ followed by projection on the valid index range.
 
